@@ -10,7 +10,6 @@ When you add simillar note in the same date you get an allert. The text you adde
 The app has not yet functional dark mode. But I am working on fixing it. I applyes only on div yet.
 ![image](https://github.com/DarinaKasprisinova/the-notebook/assets/61416662/635788f0-90f6-43fb-916b-1a75512f93b8)
 
-huhu
 
 ## Project setup
 ```

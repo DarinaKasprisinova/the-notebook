@@ -78,6 +78,7 @@
           date: this.formatDate(this.date),
         }
         );
+        this.noteError = '';
         this.note = "";
         }   
       },
