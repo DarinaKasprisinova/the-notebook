@@ -2,13 +2,16 @@
 
 ## About app 
 This app was made mostly with Vue.js and JavaScript. You can add a note with a date. Both are required. 
-![image](https://github.com/DarinaKasprisinova/the-notebook/assets/61416662/653848f3-b4ce-4bcc-9fc4-e8f441c58279)
+![image](https://github.com/DarinaKasprisinova/the-notebook/assets/61416662/33bb98f5-d975-43fb-a909-4282ce6c0480)
+
 
 When you add simillar note in the same date you get an allert. The text you added stays in the input till you remove it or till
-![image](https://github.com/DarinaKasprisinova/the-notebook/assets/61416662/584e716a-71ba-45ee-854e-d7dfdcdef065)
+![image](https://github.com/DarinaKasprisinova/the-notebook/assets/61416662/e9e47987-24be-4c38-92d9-8d98ed943e06)
 
-The app has not yet functional dark mode. But I am working on fixing it. I applyes only on div yet.
-![image](https://github.com/DarinaKasprisinova/the-notebook/assets/61416662/635788f0-90f6-43fb-916b-1a75512f93b8)
+The app has fully functional dark mode. It is made with the help of using VueUse.
+![image](https://github.com/DarinaKasprisinova/the-notebook/assets/61416662/577e6103-5cc2-4491-b814-59127859eae7)
+
+
 
 
 ## Project setup
