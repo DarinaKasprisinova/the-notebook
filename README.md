@@ -16,15 +16,17 @@ The app has fully functional dark mode. It is made with the help of using VueUse
 
 ## Project setup
 
-### If you cant run npm install and you have "can not run scripts" error you have to run these 3 commands in your PowerShell
-### also your PowerShell have to be run as Administrator
+### If you cant run npm install and you have "can not run scripts" error you have to run these 3 commands in your PowerShell also your PowerShell have to be run as Administrator
 
+```
 Get-ExecutionPolicy
-
+```
+```
 Set-ExecutionPolicy RemoteSigned
-
+```
+```
 Set-ExecutionPolicy Unrestricted
-
+```
 
 ### Run npm install
 ```
