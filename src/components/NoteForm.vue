@@ -98,7 +98,7 @@
   }
   
   label {
-    color: #aaa;
+    color: #444;
     display: inline-block;
     margin: 25px 15px 15px 0;
     font-size: 0.6em;

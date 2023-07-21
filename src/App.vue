@@ -136,6 +136,9 @@ input:checked + .slider.round::before {
   background: #2c3e50;
   color: #ffffff;
 }
+.dark label{
+  color: #ffffff;
+}
 .dark input {
   color: #ffffff;
   background: #2c3e50;
