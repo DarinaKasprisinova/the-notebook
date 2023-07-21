@@ -9,16 +9,16 @@
       </div>
       <div v-if="noteError" class="error">{{ noteError }}</div>
       <div class="submit">
-        <button>Add note</button>
+        <button class="mt-4 bg-gray-800 hover:bg-blue-800 text-blue-50 font-bold py-2 px-4 rounded">Add note</button>
       </div>
     </form>
   
-    <h2>Your notes</h2>
+    <h2 class="text-2xl font-bold mt-8 dark:text-gray-800">Your notes</h2>
   
     <div>
       <ul>
         <li v-for="not in notes" :key="not.id">
-            <h4>{{ not.note }}</h4>
+            <h4 class="text-xl font-medium font-sans">{{ not.note }}</h4>
             <p>{{ not.date }}</p>
         </li>
       </ul>
@@ -91,6 +91,7 @@
     max-width: 700px;
     margin: 30px auto;
     background: white;
+    color: #444;
     text-align: left;
     padding: 50px;
     border-radius: 10px;
@@ -120,18 +121,6 @@
     border: none;
     border-bottom: 1px solid #ddd;
     color: #555;
-  }
-  button {
-    background: #444;
-    border: 0;
-    font-size: 15px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    color: white;
-    border-radius: 20px;
-  }
-  button:hover {
-    background: #222;
   }
   .submit {
     text-align: center;

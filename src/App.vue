@@ -1,34 +1,29 @@
-<template >
-  <div :class="{ light: darkMode }">
-    
-      <div class="dark-mode-switch" >
-        <label class="switch">
-          <input type="checkbox" @change="toggleDarkMode" />
-          <span class="slider round"></span>
-        </label>
-      </div>
+<template>
+  <div>
+    <div class="dark-mode-switch">
+      <div><span class="dark:text-white">{{ isDark ? "Light" : "Dark" }} Mode</span></div>
+      <label class="switch">
+        <input type="checkbox" @click="toggleDark()" />
+        <span class="slider round"></span>
+      </label>
+    </div>
 
-      <h1>Notebook</h1>
-      <NoteForm />
-   
+    <h1 class="text-4xl font-bold mt-8 dark:text-gray-800">Notebook</h1>
+    <NoteForm />
   </div>
 </template>
 
 <script>
 import NoteForm from "./components/NoteForm.vue";
+import { useDark, useToggle } from '@vueuse/core';
 
 export default {
   name: "App",
   components: { NoteForm },
-  data() {
-    return {
-      darkMode: false,
-    };
-  },
-  methods: {
-    toggleDarkMode() {
-      this.darkMode = !this.darkMode;
-    },
+  setup() {
+    const isDark = useDark();
+    const toggleDark = useToggle(isDark);
+    return { isDark, toggleDark };
   },
 };
 </script>
@@ -53,27 +48,29 @@ body.ligh {
 }
 
 /* Dark mode css styles */
-
 .dark-mode-switch {
   position: fixed;
   top: 10px;
   right: 10px;
   z-index: 9999;
 }
-
+.dark-mode-switch label {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+}
 .switch {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 24px;
 }
-
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -85,11 +82,9 @@ body.ligh {
   border-radius: 24px;
   transition: 0.4s;
 }
-
 .slider.round {
   background-color: #000;
 }
-
 .slider.round::before {
   position: absolute;
   content: "";
@@ -101,42 +96,79 @@ body.ligh {
   border-radius: 50%;
   transition: 0.4s;
 }
-
 input:checked + .slider {
   background-color: #2196f3;
 }
-
 input:checked + .slider.round {
   background-color: rgba(255, 255, 255, 0.775);
 }
-
 input:checked + .slider::before {
   transform: translateX(16px);
 }
-
 input:checked + .slider.round::before {
   transform: translateX(20px);
 }
 
-.light {
-  background: #d7d4d4;
+.dark {
   color: rgb(17, 17, 17);
 }
-
-.light p {
-  color: rgb(70, 54, 54);
+.dark p {
+  color: rgb(254, 251, 251);
 }
-
-.light #app {
+ .dark #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #ff0000;
+  color: #4e4e4e;
+  background: rgb(235, 235, 235);
   margin-top: 50px;
 }
-.light body {
+.dark body {
   margin: 0;
-  background: crimson;
+  background: rgb(235, 235, 235);
 }
+.dark li {
+  background: #2c3e50;
+  color: #ffffff;
+}
+.dark form {
+  background: #2c3e50;
+  color: #ffffff;
+}
+.dark input {
+  color: #ffffff;
+  background: #2c3e50;
+}
+
+.dark h2 {
+  font-size: 28px; 
+  font-family: "Arial", sans-serif; 
+  font-weight: bold;
+  color: #4e4e4e;
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
+
+.dark button {
+    background: #d8d7d7;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: rgb(57, 56, 56);
+    border-radius: 4px;
+}
+.dark button:hover {
+  background-color: #45aaf2;
+}
+
+.dark h4 {
+  font-size: 20px; 
+  font-family: "Arial", sans-serif; 
+}
+
 </style>
